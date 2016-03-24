@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<settings>
+		<setting name="logImpl" value="LOG4J2" />
+		<!-- 设置当JDBC类型为空值时，要指定的值，默认为OTHER，我们指定为NULL就好了（注意是大写的NULL）-->
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+</configuration>
