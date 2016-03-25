@@ -33,6 +33,8 @@
 	<commons-io.version>2.4</commons-io.version>
 	<commons-fileupload.version>1.3.1</commons-fileupload.version>
 	<commons-codec.version>1.9</commons-codec.version>
+	<!-- redis -->
+	<jedis.version>2.5.2</jedis.version>
   </properties>
   
   <dependencies>
@@ -176,6 +178,11 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 			<version>${commons-lang3.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		    <version>${jedis.version}</version>
 		</dependency>
   </dependencies>
   <build>
