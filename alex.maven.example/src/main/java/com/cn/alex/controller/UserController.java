@@ -27,5 +27,5 @@ public class UserController {
         User user = this.userService.getUserById(userId);  
         model.addAttribute("user", user);  
         return "showUser";  
-    }  
+    }
 }  

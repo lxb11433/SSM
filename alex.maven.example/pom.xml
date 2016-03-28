@@ -17,7 +17,7 @@
      <javax.version>7.0</javax.version> 
      <!-- Mysql数据库版本号 -->
      <mysql.version>5.1.30</mysql.version> 
-     <commons-dbcp.version>1.4</commons-dbcp.version>
+     <druid-version>1.0.18</druid-version>
      <!-- JSTL标签类版本号 --> 
      <jstl.version>1.2</jstl.version>
      
@@ -125,12 +125,12 @@
             <artifactId>mysql-connector-java</artifactId>  
             <version>${mysql.version}</version>  
         </dependency>  
-        <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->  
-        <dependency>  
-            <groupId>commons-dbcp</groupId>  
-            <artifactId>commons-dbcp</artifactId>  
-            <version>${commons-dbcp.version}</version>  
-        </dependency>  
+        <!-- 导入druid 用于数据库管理 -->  
+	    <dependency>
+	        <groupId>com.alibaba</groupId>
+	        <artifactId>druid</artifactId>
+	        <version>${druid-version}</version>
+	    </dependency>
         <!-- JSTL标签类 -->  
         <dependency>  
             <groupId>jstl</groupId>  
