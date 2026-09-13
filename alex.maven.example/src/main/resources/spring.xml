@@ -8,7 +8,12 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-4.1.xsd
 ">
     
-    <!-- 自动扫描 -->  
-    <context:component-scan base-package="com.cn.alex" /> 
+    <!-- 自动扫描 -->
+    <!-- 排除 @Controller：controller 由 spring-mvc.xml 的子容器负责。
+         这里若一并扫描到，同一个 Controller 会被父子容器各实例化一次，
+         父容器中那份不受 DispatcherServlet 管理，且会绕过针对 Controller 的 AOP 代理。 -->
+    <context:component-scan base-package="com.cn.alex">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
    
 </beans>
